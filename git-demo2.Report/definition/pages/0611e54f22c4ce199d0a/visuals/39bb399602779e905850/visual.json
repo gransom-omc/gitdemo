@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "39bb399602779e905850",
   "position": {
-    "x": 448.71505385349843,
-    "y": 67.238647213521162,
+    "x": 136.26794258373207,
+    "y": 108.70813397129187,
     "z": 0,
-    "height": 614.75334595219351,
-    "width": 808.23598385232583,
+    "height": 502.20095693779911,
+    "width": 982.96650717703358,
     "tabOrder": 0
   },
   "visual": {
@@ -69,8 +68,6 @@
                     "ThemeDataColor": {
                       "ColorId": 6,
                       "Percent": 0.4
-                      "ColorId": 2,
-                      "Percent": 0
                     }
                   }
                 }
@@ -113,7 +110,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0d3c9916e8d4c83fae1d",
+        "name": "31f44ef92c0a1a2b92d0",
         "field": {
           "Column": {
             "Expression": {
@@ -127,7 +124,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8a067f7db313df945750",
+        "name": "1ef28b545a12e45e5dd8",
         "field": {
           "Aggregation": {
             "Expression": {
