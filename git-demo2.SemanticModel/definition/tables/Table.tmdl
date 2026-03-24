@@ -1,0 +1,43 @@
+table Table
+	lineageTag: 2cb4ad24-d21f-42c6-b57a-f382889c9b1e
+
+	column month
+		dataType: string
+		lineageTag: 6d97dcd2-867d-438c-b46a-5a1ac780474c
+		summarizeBy: none
+		sourceColumn: month
+		sortByColumn: order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: int64
+		formatString: 0
+		lineageTag: a235614d-cdab-4647-8f50-71415db5323a
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	column order
+		dataType: int64
+		formatString: 0
+		lineageTag: 84cb1bf8-1043-47d3-bdec-9866ab67578d
+		summarizeBy: sum
+		sourceColumn: order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Table = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Pc5JDoAgDAXQu3TtAsXxLMQFKpoQBeKUeHvbIm5+yEtbvlJgtYMMigojhz5TMJuBoKZg2PRO7wJDMujAUGKU38RD0GJUDPZyaaL+YKV1gdHEG9eSfmkZDhNSj47BjyeBpGKCxfn7l9h1MmO6kmPZ/gU=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [month = _t, value = _t, order = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"month", type text}, {"value", Int64.Type}, {"order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
