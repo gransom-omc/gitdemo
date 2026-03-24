@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "39bb399602779e905850",
   "position": {
-    "x": 159.51367781155017,
-    "y": 167.29483282674772,
+    "x": 136.26794258373207,
+    "y": 108.70813397129187,
     "z": 0,
-    "height": 442.55319148936172,
-    "width": 983.34346504559278,
+    "height": 502.20095693779911,
+    "width": 982.96650717703358,
     "tabOrder": 0
   },
   "visual": {
@@ -70,6 +70,34 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Months'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Months and Values'"
                 }
               }
             }
