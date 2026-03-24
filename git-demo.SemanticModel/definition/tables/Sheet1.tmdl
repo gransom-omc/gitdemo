@@ -1,0 +1,45 @@
+table Sheet1
+	lineageTag: 89a352f3-fb96-4dc4-83ec-7d8ecb497b8d
+
+	column a
+		dataType: string
+		lineageTag: 780208b2-bce1-4e2e-b22d-eea368bc53a3
+		summarizeBy: none
+		sourceColumn: a
+		sortByColumn: order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column b
+		dataType: int64
+		formatString: 0
+		lineageTag: 80d9bd17-786f-4c86-b327-ef939a1edafe
+		summarizeBy: sum
+		sourceColumn: b
+
+		annotation SummarizationSetBy = Automatic
+
+	column order
+		dataType: int64
+		formatString: 0
+		lineageTag: fea465ac-0292-42ac-9131-bb6e864c503b
+		summarizeBy: sum
+		sourceColumn: order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sheet1 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\gavin.ransom\OneDrive - OneWorkplace\Documents\Gavin\data2.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"a", type text}, {"b", Int64.Type}, {"order", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
