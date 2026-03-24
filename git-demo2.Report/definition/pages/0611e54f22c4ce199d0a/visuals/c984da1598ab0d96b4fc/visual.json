@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "39bb399602779e905850",
+  "name": "c984da1598ab0d96b4fc",
   "position": {
-    "x": 448.71505385349843,
-    "y": 67.238647213521162,
-    "z": 0,
-    "height": 614.75334595219351,
-    "width": 808.23598385232583,
-    "tabOrder": 0
+    "x": 31.560997671652792,
+    "y": 32.933214961724651,
+    "z": 1,
+    "height": 326.58771503710284,
+    "width": 352.65984354846819,
+    "tabOrder": 1
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -27,13 +27,8 @@
                 }
               },
               "queryRef": "Table.month",
-              "nativeQueryRef": "month",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
+              "nativeQueryRef": "month"
+            },
             {
               "field": {
                 "Aggregation": {
@@ -57,60 +52,12 @@
         }
       }
     },
-    "objects": {
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 9,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Months'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Months and Values'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "0d3c9916e8d4c83fae1d",
+        "name": "946c704370be1e493785",
         "field": {
           "Column": {
             "Expression": {
@@ -124,7 +71,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8a067f7db313df945750",
+        "name": "1faa021dfa7cd24d9b12",
         "field": {
           "Aggregation": {
             "Expression": {
