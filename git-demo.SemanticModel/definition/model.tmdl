@@ -10,9 +10,9 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["Sheet1"]
+annotation PBI_QueryOrder = ["Table"]
 
-ref table Sheet1
+ref table Table
 
 ref cultureInfo en-GB
 
