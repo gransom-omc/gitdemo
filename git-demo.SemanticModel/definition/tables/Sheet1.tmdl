@@ -34,7 +34,7 @@ table Sheet1
 		mode: import
 		source =
 				let
-				    Source = Excel.Workbook(File.Contents("C:\Users\gavin.ransom\OneDrive - OneWorkplace\Documents\Gavin\data2.xlsx"), null, true),
+				    Source = Excel.Workbook(File.Contents("C:\Users\gavin.ransom\OneDrive - OneWorkplace\Documents\Power Bi\git-demo\data.xlsx"), null, true),
 				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"a", type text}, {"b", Int64.Type}, {"order", Int64.Type}})
